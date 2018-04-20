@@ -1,0 +1,16 @@
+<a [routerLink]="['/home']">Home</a>
+
+<p>Add a new quotable author:</p>
+<div>
+  <form (submit)="petAdd()">
+    Pet Name: <input type="text" name="newPet.name" [(ngModel)]="newPet.name" /><br>
+    Pet Type: <input type="text" name="newPet.type" [(ngModel)]="newPet.type" /><br>
+    Description: <input type="text" name="newPet.description" [(ngModel)]="newPet.description" /><br>
+    Skill 1: <input type="text" name="newPet.skill1" [(ngModel)]="newPet.skill1" /><br>
+    Skill 2: <input type="text" name="newPet.skill2" [(ngModel)]="newPet.skill2" /><br>
+    Skill 3: <input type="text" name="newPet.skill3" [(ngModel)]="newPet.skill3" /><br>
+    <input type="submit" value="Submit"/>
+  </form>
+  <button [routerLink]="['/home']">Cancel</button>
+</div>
+<p>{{error}}</p>
